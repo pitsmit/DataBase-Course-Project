@@ -1,0 +1,105 @@
+//Modify this code to update the diagram
+
+Coach
+-
+ID serial
+name varchar(20)
+  surname varchar(20)
+  login varchar(10)
+  password varchar(255)
+  is_participate boolean
+
+CoachSpecializationTypes
+-
+ID serial
+name varchar(20)
+HallID int FK > Hall.ID
+
+CoachSpecialization
+-
+ID serial
+SpecID int FK > CoachSpecializationTypes.ID
+CoachID int FK > Coach.ID
+
+CoachSchedule
+-
+ID serial
+CoachID int FK > Coach.ID
+date date
+  start time
+  stop time
+
+Client
+-
+ID serial
+name varchar(20)
+  surname varchar(20)
+  login varchar(10)
+  password varchar(255)
+  is_participate boolean
+
+ClientDynamicTypes
+-
+ID serial
+name varchar(30)
+  unit varchar(20)
+
+ClientDynamic
+-
+ID serial
+ClientID int FK > Client.ID
+DynamicTypeID int FK > ClientDynamicTypes.ID
+value float
+date Date
+
+Admin
+-
+ID serial
+name varchar(20)
+  surname varchar(20)
+  login varchar(10)
+  password varchar(255)
+  is_participate boolean
+
+StandartTraining
+-
+ID serial
+name varchar(50)
+AdminID int FK > Admin.ID
+CoachID int FK > Coach.ID
+HallID int FK > Hall.ID
+capacity int
+  datetime timestamp
+  duration float
+
+Hall
+-
+ID serial
+name varchar(30)
+
+HallSchedule
+-
+ID serial
+HallID int FK > Hall.ID
+date date
+  start time
+  stop time
+
+TrainingSigns
+-
+ID serial
+ClientID int FK > Client.ID
+StdTrainingID int FK > StandartTraining.ID
+
+IndividualTraining
+-
+ID serial
+CoachID int FK > Coach.ID
+ClientID int FK > Client.ID
+HallID int FK > Hall.ID
+datetime timestamp
+  duration float
+  notes text
+
+
+//POSITION({"Coach":{"x":-98.81027033089367,"y":1256.964491667297,"w":230},"Client":{"x":-1203.9835355973744,"y":705.6213139462177,"w":230},"Admin":{"x":-98.02030269492161,"y":953.961292670453,"w":230},"ClientDynamic":{"x":-549.5523813792994,"y":756.3322140265351,"w":230},"ClientDynamicTypes":{"x":-180.98143699728257,"y":771.8007903736016,"w":246},"CoachSchedule":{"x":-574.1511057612804,"y":1358.441270416592,"w":230},"StandartTraining":{"x":-389.10953616278266,"y":992.8639128400881,"w":230},"TrainingSigns":{"x":-825.5145294832076,"y":873.7596414640212,"w":230},"Hall":{"x":-1208.4078217399508,"y":1418.023901983115,"w":230},"HallSchedule":{"x":-881.7254153827547,"y":1618.057925112006,"w":230},"IndividualTraining":{"x":-952.1203350639329,"y":1054.400053933375,"w":246},"CoachSpecializationTypes":{"x":-302.2241747784549,"y":1562.0141134465746,"w":294},"CoachSpecialization":{"x":-644.2844754764892,"y":1722.3383624646697,"w":254}})

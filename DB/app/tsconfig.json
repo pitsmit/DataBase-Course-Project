@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "rootDir": "src",
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@interfaces/*": ["Interfaces/*"],
+      "@repository/*": ["Repository/*"],
+      "@essences/*": ["Essences/*"],
+      "@services/*": ["Services/*"],
+      "@front/*": ["Front/*"],
+      "@commands/*": ["Commands/*"],
+      "@facade/*": ["Facade/*"],
+      "@index/*": ["*"]
+    },
+  }
+}
