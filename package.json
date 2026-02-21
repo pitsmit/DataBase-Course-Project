@@ -2,9 +2,7 @@
   "scripts": {
     "start": "node -r module-alias/register -r tsconfig-paths/register dist/index.js",
     "dev": "ts-node -r tsconfig-paths/register src/index.ts",
-    "build": "tsc",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "build": "tsc"
   },
   "dependencies": {
     "inversify": "^7.5.0",
@@ -24,15 +22,11 @@
     "@types/node": "^22.14.0",
     "dotenv": "^16.4.7",
     "cli-table3": "^0.6.5",
-    "babel-jest": "^29.7.0",
-    "@types/jest": "^29.5.14",
-    "jest": "^29.7.0",
     "module-alias": "^2.2.3",
     "reflect-metadata": "^0.2.2",
     "tsconfig-paths": "^4.2.0",
     "@types/pg": "^8.11.13",
-    "@types/bcrypt": "^5.0.2",
-    "ts-jest": "^29.3.1"
+    "@types/bcrypt": "^5.0.2"
   },
   "_moduleAliases": {
     "@interfaces": "dist/Interfaces",
